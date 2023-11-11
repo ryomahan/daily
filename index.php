@@ -1,7 +1,21 @@
 <?php
 get_header();
 
-$query = new WP_Query( array( "category__not_in" => array(1) ) );
+$args = array(
+    "post_type" => array("post"),
+    "post_status" => array("publish"),
+    "tax_query" => array(
+        "relation" => "AND",
+        array(
+            "taxonomy" => "category",
+            "field" => "slug",
+            "terms" => array( "uncategorized" ),
+            "operator" => "NOT IN",
+            "include_children" => true,
+        ),
+    )
+);
+$query = new WP_Query( $args );
 
 if ( $query -> have_posts() ) {
     while ( $query -> have_posts() ) {

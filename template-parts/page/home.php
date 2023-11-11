@@ -9,7 +9,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content(daily_continue_reading_text());
+		the_content();
 
 		wp_link_pages(
 			array(
@@ -25,4 +25,5 @@
 
 	<footer class="entry-footer default-max-width">
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
+<!-- #post-<?php the_ID(); ?> -->
