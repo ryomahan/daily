@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+:lang(en-US) {
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
+}
+
+.daily body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.daily>body>main {
+    @apply flex gap-2 mt-4;
+}
+
+.daily>body>main>.article {
+}
+
+.daily-nav {
+    @apply flex;
+}
