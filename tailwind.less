@@ -10,18 +10,26 @@ body {
     font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
 }
 
-.daily body {
-    max-width: 1200px;
-    margin: 0 auto;
+@layer daily {
+    .daily {
+        >body {
+            @apply max-w-[1200px] mx-auto;
+
+            main {
+                @apply test\-[123];
+            }
+
+            >main {
+                @apply flex gap-2 mt-4;
+            }
+        }
+    }
 }
 
-.daily>body>main {
-    @apply flex gap-2 mt-4;
-}
+.daily>body>main {}
 
-.daily>body>main>.article {
-}
+.daily>body>main>.article {}
 
 .daily-nav {
-    @apply flex;
+    @apply flex mt-2;
 }

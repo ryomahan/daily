@@ -7,13 +7,17 @@ body {
 :lang(en-US) {
   font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
 }
-.daily body {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.daily > body > main {
-  @apply flex gap-2 mt-4;
+@layer daily {
+  .daily > body {
+    @apply max-w- [1200px] mx-auto;
+  }
+  .daily > body main {
+    @apply test\- [123];
+  }
+  .daily > body > main {
+    @apply flex gap-2 mt-4;
+  }
 }
 .daily-nav {
-  @apply flex;
+  @apply flex mt-2;
 }
